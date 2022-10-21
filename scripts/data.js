@@ -9,7 +9,7 @@ const data = {
       title: "Introduction to Programming",
       url: "https://catalog.jmu.edu/preview_course_nopop.php?catoid=50&coid=257219",
       desc: "Fundamental problem-solving techniques using a modern programming language. Topics include variables, input/output, decisions, loops, functions, arrays, and objects. Students learn about algorithm development, testing strategies, and software tools.",
-      prereqs: [],
+      prereqs: ['No Prereqs'],
       credits: 3,
     },
     {

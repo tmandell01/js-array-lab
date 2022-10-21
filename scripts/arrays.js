@@ -23,6 +23,7 @@ function cardDisplay(item) {
                         </div>`
 
     document.write(card_temp);
+
 }
 
 data.items.forEach(element => cardDisplay(element));
@@ -33,8 +34,8 @@ searchButton.addEventListener("click", (ev) => {
     ev.preventDefault();
     const searchField = document.querySelector('input[name="query-text"]');
     const queryText = searchField.value;
-    console.log(queryText);
 
-   var newArray = data.filter(title => title.include(queryText));
-   print(newArray);
+   var newArray = data.items.filter(x => x.title.includes(queryText));
+
+   newArray.forEach(element => cardDisplay(element));
 })
