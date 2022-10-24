@@ -22,17 +22,21 @@ function cardDisplay(item) {
                         </div>
                         </div>`
 
-    document.write(card_temp);
+    // document.write(card_temp);
+
+    const resultsContainer = document.getElementById("#filtered-results");
+    
 
 }
 
 data.items.forEach(element => cardDisplay(element));
 
+const searchField = document.querySelector('input[name="query-text"]');
+
 const searchButton = document.getElementById("search-btn");
 searchButton.addEventListener("click", (ev) => {
     console.log(ev);
     ev.preventDefault();
-    const searchField = document.querySelector('input[name="query-text"]');
     const queryText = searchField.value;
 
    var newArray = data.items.filter(x => x.title.includes(queryText));
