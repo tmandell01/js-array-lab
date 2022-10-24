@@ -5,6 +5,7 @@ console.log(data);
 
 // 3. we update the result count and related summary info as we filter
 
+const cont = document.getElementById("countRes");
 
 function cardDisplay(item) {
 
@@ -26,6 +27,7 @@ function cardDisplay(item) {
 
     const resultsContainer = document.getElementById("#filtered-results");
     
+    resultsContainer.innerHTML += card_temp
 
 }
 
@@ -41,5 +43,11 @@ searchButton.addEventListener("click", (ev) => {
 
    var newArray = data.items.filter(x => x.title.includes(queryText));
 
+   const clear = document.getElementById("#filtered-results");
+   clear.replaceChildren();
+
    newArray.forEach(element => cardDisplay(element));
+
+   cont.replaceChildren();
+   cont.innerHTML += newArray.length.toString();
 })
